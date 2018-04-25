@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>WWE PRO WRESTLING BATTLE ROYALE</h1>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    </head>
+    <body>
+
+        <!-- SECTION TO SELECT WRESTLER TO FIGHT WITH-->
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12" id="title">
+                    <h2>CHOOSE YOUR WRESTLER</h2>
+                </div>
+            </div>
+
+            <div class="row availableWrestlers">
+
+                <button class="btn btn-primary bouton-image monBouton availableWrestler" data-obj="steveAustin"><img class="image" src="assets/images/img1Austin.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton availableWrestler" data-obj="theRock"><img class="image" src="assets/images/img2Rock.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton availableWrestler" data-obj="hulkHogan"><img class="image" src="assets/images/img3Hogan.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton availableWrestler" data-obj="bookerT"><img class="image" src="assets/images/img4Booker.jpg"></button>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" id="title">
+                    <h2>Your Chosen Wrestler</h2>
+                </div>
+            </div>
+
+            <div class="row playerWrestler">
+
+                <!-- <button class="btn btn-primary bouton-image monBouton playerWrestler" data-obj="steveAustin"><img class="image" src="assets/images/img1Austin.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton playerWrestler" data-obj="theRock"><img class="image" src="assets/images/img2Rock.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton playerWrestler" data-obj="hulkHogan"><img class="image" src="assets/images/img3Hogan.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton playerWrestler" data-obj="bookerT"><img class="image" src="assets/images/img4Booker.jpg"></button> -->
+
+            </div>
+
+
+        <!-- SECTION TO SELECT WRESTLER TO FIGHT-->
+            <div class="row">
+                <div class="col-md-12" id="title">
+                    <h2>Enemies available to wrestle</h2>
+                </div>
+            </div>
+
+            <div class="row enemyWrestlers">
+
+                <!-- <button class="btn btn-primary bouton-image monBouton enemyWrestler"><img class="image enemyWrestler1" src="assets/images/img1Austin.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton enemyWrestler"><img class="image enemyWrestler2" src="assets/images/img2Rock.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton enemyWrestler"><img class="image enemyWrestler3" src="assets/images/img3Hogan.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton enemyWrestler"><img class="image enemyWrestler4" src="assets/images/img4Booker.jpg"></button> -->
+    
+
+                <!-- <div class="col-md wrestler1"><img class="image" src="assets/images/img1Austin.jpg"></div>
+                <div class="col-md wrestler2"><img class="image" src="assets/images/img2Rock.jpg"></div>
+                <div class="col-md wrestler3"><img class="image" src="assets/images/img3Hogan.jpg"></div>
+                <div class="col-md wrestler4"><img class="image" src="assets/images/img4Booker.jpg"></div> -->
+                <!-- <div class="col-md"></div> -->
+            </div>
+
+        <!-- SECTION TO SELECT HOW TO ATTACK-->
+        <div class="row fightSection">
+            <div class="row">
+                <div class="col-md-12" id="title">
+                    <h2>Fight Section</h2>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <button type="button" class="btn btn-success">ATTACK!</button>
+                <button type="button" class="btn btn-danger">DEFEND!</button>
+            </div>
+        </div>
+
+        <!-- SECTION TO DISPLAY WHICH WRESTLER CURRENTLY FIGHTING-->
+            <div class="row">
+                <div class="col-md-12" id="title">
+                    <h2>Defender</h2>
+                </div>
+            </div>
+            
+            <div class="row defenderWrestlers">
+
+                <!-- <button class="btn btn-primary bouton-image monBouton defenderWrestler"><img class="image defenderWrestler1" src="assets/images/img1Austin.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton defenderWrestler"><img class="image defenderWrestler2" src="assets/images/img2Rock.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton defenderWrestler"><img class="image defenderWrestler3" src="assets/images/img3Hogan.jpg"></button>
+                <button class="btn btn-primary bouton-image monBouton defenderWrestler"><img class="image defenderWrestler4" src="assets/images/img4Booker.jpg"></button> -->
+
+                <!-- <div class="col-md wrestler1"><img class="image" src="assets/images/img1Austin.jpg"></div>
+                <div class="col-md wrestler2"><img class="image" src="assets/images/img2Rock.jpg"></div>
+                <div class="col-md wrestler3"><img class="image" src="assets/images/img3Hogan.jpg"></div>
+                <div class="col-md wrestler4"><img class="image" src="assets/images/img4Booker.jpg"></div> -->
+                <!-- <div class="col-md"></div> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="assets/javascript/game.js"></script>
+    </body>
+</html>

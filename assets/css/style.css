@@ -1,0 +1,22 @@
+.availableWrestlers .image {
+    border: 15px solid green;
+}
+
+.playerWrestler .image {
+    border: 20px solid black;
+}
+
+.enemyWrestlers .image {
+    border: 15px solid yellow;
+}
+
+.defenderWrestlers .image  {
+    border: 15px solid red;
+}
+
+h2 {
+    /* clear: both; */
+    float: left;
+}
+
+
