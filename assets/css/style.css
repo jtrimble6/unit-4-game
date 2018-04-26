@@ -6,11 +6,11 @@
     border: 20px solid black;
 }
 
-.enemyWrestlers .image {
+.enemyWrestler .image {
     border: 15px solid yellow;
 }
 
-.defenderWrestlers .image  {
+.defenderWrestler .image  {
     border: 15px solid red;
 }
 

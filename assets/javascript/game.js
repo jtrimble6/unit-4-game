@@ -1,38 +1,19 @@
 //GLOBAL FUNCTIONS
 
-//PICKED PLAYER WRESTLER
-    // function playerChosen() {
-    //     for (var i=0; i < wweWrestlers.length; i++) {
-    //         if (wweWrestlers[i].name !== playerWrestler.name) {
-    //             $(this).show();
-    //             controlDefenders.show();
-    //             console.log("NO WAY!!!");
-    //         }
-    //     }
-    // }
-
     // CONTROL WRESTLERS IN 'YOUR WRESTLER'
-    var control1Player = $(".playerWrestler .playerWrestler1");
-    var control2Player = $(".playerWrestler .playerWrestler2");
-    var control3Player = $(".playerWrestler .playerWrestler3");
-    var control4Player = $(".playerWrestler .playerWrestler4");
+    var controlPlayer = $(".playerWrestler");
     
     // CONTROL WRESTLERS IN 'ENEMY WRESTLERS'
-    var control1Enemy = $(".enemyWrestler .enemyWrestler1");
-    var control2Enemy = $(".enemyWrestler .enemyWrestler2");
-    var control3Enemy = $(".enemyWrestler .enemyWrestler3");
-    var control4Enemy = $(".enemyWrestler .enemyWrestler4");
-    
+    var controlEnemy = $(".enemyWrestler");
+   
     // CONTROL WRESTLERS IN 'DEFENDER'
-    var control1Defender = $(".defenderWrestler .defenderWrestler1");
-    var control2Defender = $(".defenderWrestler .defenderWrestler2");
-    var control3Defender = $(".defenderWrestler .defenderWrestler3");
-    var control4Defender = $(".defenderWrestler .defenderWrestler4");
+    var controlDefender = $(".defenderWrestler");
+    
 
     // CONTROL ENEMIES/DEFENDERS/FIGHT
     var controlAvailable = $(".availableWrestlers");
     var controlPlayer = $(".playerWrestler");
-    var controlEnemies = $(".enemyWrestlers");
+    var controlEnemies = $(".enemyWrestler");
     var controlDefenders = $(".defenderWrestlers");
     var controlFight = $(".fightSection");
 
@@ -80,7 +61,7 @@
     function playerChosen() {
         for (var i=0; i < wweWrestlers.length; i++) {
             if (wweWrestlers[i].name !== playerWrestler.name) {
-                $(".enemyWrestlers").append('<div class = "col-md-3 cont"><img src="' + wweWrestlers[i].iconPath + '"class="btn btn-primary bouton-image monBouton image enemyWrestler" data-obj="' + wweWrestlers[i].name + '"></div>');
+                $(".enemyWrestler").append('<div class = "col-md-3 cont"><img src="' + wweWrestlers[i].iconPath + '"class="btn btn-primary bouton-image monBouton image enemyWrestler" data-obj="' + wweWrestlers[i].name + '"></div>');
                 
             }
         }
@@ -99,6 +80,8 @@
 
     $(".enemyWrestler").on("click", function() {
         computerWrestler = eval($(this).data("obj"));
+        controlEnemies.show();
+        console.log(this);
         console.log(computerWrestler);
         // $(".defenderWrestlers").html('<img src="' + computerWrestler.iconPath + '" class="btn btn-primary bouton-image monBouton image playerWrestler" data-obj="' + computerWrestler.name + '">');
         // console.log(computerWrestler); 
