@@ -1,17 +1,28 @@
+body {
+    background-image: url("../images/background1.jpg");
+    background-size: 100%;
+    color: white;
+}
+
 .availableWrestlers .image {
     border: 15px solid green;
+    padding: 0;
 }
 
 .playerWrestler .image {
-    border: 20px solid black;
+    border: 20px solid white;
+    padding: 0;
 }
 
-.enemyWrestler .image {
+.enemyWrestlers .image {
     border: 15px solid yellow;
+    padding: 0;
 }
+
 
 .defenderWrestler .image  {
     border: 15px solid red;
+    padding: 0;
 }
 
 h2 {
