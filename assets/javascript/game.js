@@ -26,7 +26,7 @@
         name: "steveAustin",
         healthPoints: 100,
         attackPoints: 17,
-        counterAttackPoints: 27,
+        counterAttackPoints: 15,
         iconPath: "assets/images/img1Austin.jpg",
     }
 
@@ -34,7 +34,7 @@
         name: "theRock",
         healthPoints: 115,
         attackPoints: 16,
-        counterAttackPoints: 32,
+        counterAttackPoints: 14,
         iconPath: "assets/images/img2Rock.jpg",
     }
 
@@ -42,7 +42,7 @@
         name: "hulkHogan",
         healthPoints: 120,
         attackPoints: 14,
-        counterAttackPoints: 30,
+        counterAttackPoints: 16,
         iconPath: "assets/images/img3Hogan.jpg",
     }
 
@@ -50,7 +50,7 @@
         name: "bookerT",
         healthPoints: 95,
         attackPoints: 19,
-        counterAttackPoints: 26,
+        counterAttackPoints: 12,
         iconPath: "assets/images/img4Booker.jpg",
     }
 
@@ -60,7 +60,7 @@
     function playerChosen() {
         for (var i=0; i < wweWrestlers.length; i++) {
             if (wweWrestlers[i].name !== playerWrestler.name) {
-                $(".enemyWrestlers").append('<div class = "col-md-3 cont"><img src="' + wweWrestlers[i].iconPath + '"class="btn btn-primary bouton-image monBouton image enemyWrestler" data-obj="' + wweWrestlers[i].name + '"></div>');
+                $(".enemyWrestlers").append('<div class = "col-md-3 cont computer"><img src="' + wweWrestlers[i].iconPath + '"class="btn btn-primary bouton-image monBouton image enemyWrestler" data-obj="' + wweWrestlers[i].name + '"><h3 class="playerStats">Health: '  + wweWrestlers[i].healthPoints + '</h3></div>');
                 
             }
         }
@@ -74,7 +74,7 @@
         playerWrestler = eval($(this).data("obj"));
         controlAvailable.hide();
         controlEnemy.show();
-        $(".playerWrestler").html('<img src="' + playerWrestler.iconPath + '" class="btn btn-primary bouton-image monBouton image playerWrestler" data-obj="' + playerWrestler.name + '">');
+        $(".playerWrestler").html('<img src="' + playerWrestler.iconPath + '" class="btn btn-primary bouton-image monBouton image playerWrestler" data-obj="' + playerWrestler.name + '"><h3 class="playerStats">Health: '  + playerWrestler.healthPoints + '</h3>');
         console.log(playerWrestler); 
         playerChosen();
         
@@ -85,7 +85,7 @@
         if (!enemyAttacking) {
         computerWrestler = eval($(this).data("obj")); 
         console.log(computerWrestler);
-        $(".defenderWrestler").html('<img src="' + computerWrestler.iconPath + '" class="btn btn-primary bouton-image monBouton image" id="computerWrestler" data-obj="' + computerWrestler.name + '">');
+        $(".defenderWrestler").html('<img src="' + computerWrestler.iconPath + '" class="btn btn-primary bouton-image monBouton image" id="computerWrestler" data-obj="' + computerWrestler.name + '"><h3 class="playerStats">Health: '  + computerWrestler.healthPoints + '</h3>');
         $(this).hide();
         defenderWrestler.push(computerWrestler);
         enemyAttacking = true;
@@ -115,24 +115,31 @@
                     }
                     if (computerAlive == false) {
                         playerWon = true;
-                        console.log("YOU WIN");
+                        alert("YOU WIN");
                     }
                 }
             }
 
             else {
                 if (playerWrestler.healthPoints <= 0) {
-                    console.log("YOU LOSE");
+                    console.logx("YOU LOSE");
                 }
             }
 
+        updatePlayerStats();
+        updateComputerStats();
 
 
         }
     })
 
+    function updatePlayerStats() {
+        $("#playerStats").html("Health: " + playerWrestler.healthPoints)
+    }
 
-
+    function updateComputerStats() {
+        $("#playerStats").html("Health: " + computerWrestler.healthPoints)
+    }
 
 
 })
